@@ -2,20 +2,20 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 import React from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { PURPLECOLOR } from '../constants/color';
-import InputField from '../components/Input';
 import ReusableButton from '../components/SubmitBtn';
+import OTPInput from '../components/OtpInput';
 
 const VerificationCode = ({ navigation }) => {
   const img1 = require('assets/forgotpwd.png');
 
   return (
     <View style={styles.container}>
-      <AntDesign name="arrowleft" size={24} color="black" onPress={() => navigation.navigate("Login")} />
+      <AntDesign name="arrowleft" size={24} color="black" onPress={() => navigation.navigate("ForgotPassword")} />
       <Image source={img1} style={styles.image} />
       <View style={styles.form}>
         <Text style={styles.heading}>Verification Code Sent!</Text>
         <Text style={styles.subHeading}>A verification code has been sent to your email for password change.</Text>
-        <InputField placeholder={"Enter Verification Code.."} />
+        <OTPInput placeholder={"Enter Verification Code.."}/>
         <View style={styles.txtNavigation}>
           <Text style={styles.navigateTxt}>Go back to</Text>
           <Text style={styles.loginBtn} onPress={() => navigation.navigate("Login")}>LOGIN</Text>

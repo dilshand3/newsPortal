@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Pressable, KeyboardAvoidingView, ScrollView, Platform, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { StyleSheet, Text, View, Pressable, KeyboardAvoidingView, ScrollView, Platform, TouchableWithoutFeedback, Keyboard, Image } from 'react-native';
 import { PURPLECOLOR } from '../constants/color';
 import InputField from '../components/Input';
 import Feather from 'react-native-vector-icons/Feather';
@@ -11,6 +11,8 @@ const Login = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [secureText, setSecureText] = useState(true);
+  const googleImg = require("assets/google.png");
+  const faceBookImg = require("assets/facebook.png")
 
   return (
     <KeyboardAvoidingView 
@@ -40,16 +42,16 @@ const Login = ({ navigation }) => {
             <View style={styles.line} />
           </View>
           <Pressable style={styles.socialButton}>
-            <AntDesign name="google" size={20} color="#DB4437" />
+            <Image source={googleImg} height={4} width={4}/>
             <Text style={styles.socialText}>Continue with Google</Text>
           </Pressable>
 
           <Pressable style={styles.socialButton}>
-            <Entypo name="facebook" size={20} color="#1877F2" />
+            <Image source={faceBookImg} height={4} width={4}/>
             <Text style={styles.socialText}>Continue with Facebook</Text>
           </Pressable>
           <Text style={styles.signUpText}>
-            Don't have an account? <Text style={styles.signUpLink}>Sign Up</Text>
+            Don't have an account? <Text style={styles.signUpLink} onPress={() => navigation.navigate("signup")}>Sign Up</Text>
           </Text>
         </ScrollView>
       </TouchableWithoutFeedback>
@@ -121,7 +123,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#E5E7EB',
     borderRadius: 10,
-    padding: 12,
+    padding: 4,
     marginVertical: 5,
     justifyContent: 'center',
   },
