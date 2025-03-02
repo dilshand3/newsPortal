@@ -10,7 +10,8 @@ import CategoryItem from '../components/CategoryItem';
 const ExploreNews = () => {
   const img1 = require("assets/newsImg1.jpeg");
   const [searchText, setSearchText] = useState("");
-  const [activeCategory, setActiveCategory] = useState("");
+  const categoriesFromAPI = ['All', 'Sports', 'Politics', 'Technology', 'Business'];
+  const [activeCategory, setActiveCategory] = useState(categoriesFromAPI[0]);
 
   const newsData = [
     {
@@ -53,8 +54,6 @@ const ExploreNews = () => {
       time: "1d ago"
     }
   ];
-
-  const categoriesFromAPI = ['All', 'Sports', 'Politics', 'Technology', 'Business'];
 
   return (
     <View style={styles.container}>

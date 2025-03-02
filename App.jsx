@@ -13,6 +13,7 @@ import EmailVerification from './src/SignupScreen/EmailVerification';
 import AccountVerified from './src/SignupScreen/AccountVerified';
 import LatestNews from './src/Screen/LatestNews';
 import ExploreNews from './src/Screen/ExploreNews';
+import NewsVideo from './src/Screen/NewsVideo';
 
 const Tab = createBottomTabNavigator();
 
@@ -40,7 +41,8 @@ const App = () => {
         <AuthNavigator />
       </NavigationContainer> */}
       {/* <LatestNews/> */}
-      <ExploreNews/>
+      {/* <ExploreNews/> */}
+      <NewsVideo/>
     </View>
   );
 };
