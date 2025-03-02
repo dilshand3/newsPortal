@@ -5,7 +5,7 @@ import { PURPLECOLOR } from '../constants/color';
 const ReusableButton = ({ title, onPress, style }) => {
   return (
     <Pressable style={[styles.button, style]} onPress={onPress}>
-      <Text style={styles.buttonText}>{title}</Text>
+      <Text style={[styles.buttonText,style]}>{title}</Text>
     </Pressable>
   );
 };
