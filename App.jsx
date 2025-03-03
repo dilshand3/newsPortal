@@ -45,10 +45,10 @@ const App = () => {
       </NavigationContainer> */}
       {/* <LatestNews/> */}
       {/* <ExploreNews/> */}
-      {/* <NewsVideo/> */}
+      <NewsVideo/>
       {/* <SavedNewsArticle/> */}
       {/* <NewsNotification/> */}
-      <LiveNews/>
+      {/* <LiveNews/> */}
     </View>
   );
 };

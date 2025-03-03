@@ -58,6 +58,7 @@ const NewsVideo = () => {
                     </View>
                 )}
             />
+            <BottomTab/>
         </View>
     );
 };
