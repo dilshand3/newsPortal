@@ -17,6 +17,7 @@ import NewsVideo from './src/Screen/NewsVideo';
 import SavedNewsArticle from './src/Screen/SavedNews';
 import NewsNotification from './src/Screen/NewsNotification';
 import LiveNews from './src/Screen/LiveNews';
+import Video from './src/Screen/Video';
 
 const Tab = createBottomTabNavigator();
 
@@ -45,10 +46,11 @@ const App = () => {
       </NavigationContainer> */}
       {/* <LatestNews/> */}
       {/* <ExploreNews/> */}
-      <NewsVideo/>
+      {/* <NewsVideo/> */}
       {/* <SavedNewsArticle/> */}
       {/* <NewsNotification/> */}
       {/* <LiveNews/> */}
+      <Video/>
     </View>
   );
 };
