@@ -85,6 +85,7 @@ const ExploreNews = () => {
             image={item.image}
             title={item.title}
             time={item.time}
+            showIcons={true}
           />
         )}
         keyExtractor={item => item.id}

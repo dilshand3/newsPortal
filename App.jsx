@@ -14,6 +14,7 @@ import AccountVerified from './src/SignupScreen/AccountVerified';
 import LatestNews from './src/Screen/LatestNews';
 import ExploreNews from './src/Screen/ExploreNews';
 import NewsVideo from './src/Screen/NewsVideo';
+import SavedNewsArticle from './src/Screen/SavedNews';
 
 const Tab = createBottomTabNavigator();
 
@@ -42,7 +43,8 @@ const App = () => {
       </NavigationContainer> */}
       {/* <LatestNews/> */}
       {/* <ExploreNews/> */}
-      <NewsVideo/>
+      {/* <NewsVideo/> */}
+      <SavedNewsArticle/>
     </View>
   );
 };
