@@ -3,7 +3,6 @@ import React from 'react';
 import Feather from "react-native-vector-icons/Feather";
 import { PURPLECOLOR } from '../constants/color';
 import NewsCard from '../components/NewsCard';
-import BottomTab from '../components/BottomTab';
 
 const NewsNotification = () => {
   const img1 = require("assets/newsImg1.jpeg");
