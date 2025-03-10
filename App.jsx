@@ -3,6 +3,8 @@ import Login from './src/LoginScreen/Login';
 import ForgotPassword from './src/LoginScreen/ForgotPassword';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from "@react-navigation/native";
+import { Provider } from 'react-redux';
+import store from './redux/store/store';
 import VerificationCode from './src/LoginScreen/VerificationCode';
 import ResetPasswd from './src/LoginScreen/ResetPasswd';
 import PasswordSucces from './src/LoginScreen/PasswordSucces';
@@ -30,10 +32,10 @@ const AuthNavigator = () => {
       <Tab.Screen name='resetPassword' component={ResetPasswd} />
       <Tab.Screen name='passwordSucces' component={PasswordSucces} />
       <Tab.Screen name='signup' component={signup} />
-      <Tab.Screen name='OtpVerification' component={Verification}/>
-      <Tab.Screen name='PhoneVerification' component={PhoneVerification}/>
-      <Tab.Screen name='EmailVerification' component={EmailVerification}/>
-      <Tab.Screen name='AccountVerified' component={AccountVerified}/>
+      <Tab.Screen name='OtpVerification' component={Verification} />
+      <Tab.Screen name='PhoneVerification' component={PhoneVerification} />
+      <Tab.Screen name='EmailVerification' component={EmailVerification} />
+      <Tab.Screen name='AccountVerified' component={AccountVerified} />
     </Tab.Navigator>
   );
 };
@@ -41,16 +43,18 @@ const AuthNavigator = () => {
 const App = () => {
   return (
     <View style={styles.container}>
-      {/* <NavigationContainer>
+      <Provider store={store}>
+        {/* <NavigationContainer>
         <AuthNavigator />
       </NavigationContainer> */}
-      {/* <LatestNews/> */}
-      {/* <ExploreNews/> */}
-      {/* <NewsVideo/> */}
-      {/* <SavedNewsArticle/> */}
-      {/* <NewsNotification/> */}
-      {/* <LiveNews/> */}
-      <Video/>
+        <LatestNews/>
+        {/* <ExploreNews/> */}
+        {/* <NewsVideo/> */}
+        {/* <SavedNewsArticle/> */}
+        {/* <NewsNotification/> */}
+        {/* <LiveNews/> */}
+        {/* <Video /> */}
+      </Provider>
     </View>
   );
 };

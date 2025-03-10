@@ -1,8 +1,8 @@
 import React from "react";
 import { View, Text, TextInput, Pressable, StyleSheet } from "react-native";
-import Feather from "react-native-vector-icons/Feather"; // Bell icon
-import AntDesign from "react-native-vector-icons/AntDesign"; // Search icon
-import { PURPLECOLOR } from "../constants/color"; // Import karo agar color constants file hai
+import Feather from "react-native-vector-icons/Feather";
+import AntDesign from "react-native-vector-icons/AntDesign";
+import { PURPLECOLOR } from "../constants/color";
 
 const HeaderInput = ({
     title,
@@ -32,7 +32,7 @@ const HeaderInput = ({
                         style={styles.input}
                         underlineColorAndroid="transparent"
                     />
-                    <Pressable onPress={onRightIconPress}>
+                    <Pressable onPress={onRightIconPress}> 
                         <Feather name={rightIcon} size={22} color={PURPLECOLOR} style={styles.rightIcon} />
                     </Pressable>
                 </View>

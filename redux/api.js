@@ -1,0 +1,1 @@
+export const api = "https://news-portal-backend-code-a5rg.onrender.com/api/v1";
