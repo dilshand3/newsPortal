@@ -11,14 +11,14 @@ export const NewsApi = createApi({
                 method: "GET"
             })
         }),
-        searchNews : builder.query({
-            query : (key) => ({
-                url : `/news/search/${key}`,
-                method : "GET"
+        searchNews: builder.query({
+            query: (key) => ({
+                url: `/news/search/${key}`,
+                method: "GET"
             })
-        })
+        }),
     })
 });
 
-export const { useGetAllNewsQuery ,useLazySearchNewsQuery } = NewsApi;
+export const { useGetAllNewsQuery, useLazySearchNewsQuery, useCategoriesQuery } = NewsApi;
 export default NewsApi;

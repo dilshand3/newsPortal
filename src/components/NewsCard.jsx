@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, Image, StyleSheet, Pressable } from "react-native";
 import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import Entypo from "react-native-vector-icons/Entypo";
 import { PURPLECOLOR } from "../constants/color";
+import FontAwesome from "react-native-vector-icons/FontAwesome";
 
 const NewsCard = ({ image, title, time, showPlayButton, showIcons }) => {
-  const unsaved = require("assets/unsaved.png");
+  const [unSave, setunSave] = useState(true);
+  const saveIconClick = () => {
+    setunSave(!unSave)
+  }
   return (
     <View style={styles.cardContainer}>
       <Image source={typeof image === "string" ? { uri: image } : image} style={styles.image} />
@@ -34,8 +38,8 @@ const NewsCard = ({ image, title, time, showPlayButton, showIcons }) => {
               <Pressable style={styles.iconButton}>
                 <AntDesign name="download" size={18} color={PURPLECOLOR} />
               </Pressable>
-              <Pressable style={styles.iconButton}>
-                <Image source={unsaved} style={{ width: 12, height: 18 }} />
+              <Pressable style={styles.iconButton} onPress={saveIconClick}>
+                <FontAwesome name={unSave ? "bookmark-o" : "bookmark"} size={18} color={PURPLECOLOR} />
               </Pressable>
               <Pressable style={styles.iconButton}>
                 <Entypo name="share" size={18} color={PURPLECOLOR} />

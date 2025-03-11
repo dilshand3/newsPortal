@@ -47,8 +47,8 @@ const App = () => {
         {/* <NavigationContainer>
         <AuthNavigator />
       </NavigationContainer> */}
-        <LatestNews/>
-        {/* <ExploreNews/> */}
+        {/* <LatestNews/> */}
+        <ExploreNews/>
         {/* <NewsVideo/> */}
         {/* <SavedNewsArticle/> */}
         {/* <NewsNotification/> */}
